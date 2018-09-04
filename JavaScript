@@ -1,1 +1,13 @@
-javascript语句，就是向浏览器发出的指令，这些命令的作用是告诉浏览器要做的事情。
+1. javascript语句，就是向浏览器发出的指令，这些命令的作用是告诉浏览器要做的事情。
+2. js中遍历对象属性：
+    var obj={"name":"wjy","age":26,"sex":"female"};
+    var keys=[];   
+    var values=[];
+    for(var key in obj){   
+    //hasOwnProperty(),只遍历对象自身的属性，而不包含继承于原型链上的属性。  
+    if (obj.hasOwnProperty(key) === true){  
+        keys.push(key);    
+        values.push(obj[key]);   
+        }                 
+    }
+3. 
