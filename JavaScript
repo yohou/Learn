@@ -10,4 +10,169 @@
         values.push(obj[key]);   
         }                 
     }
-3. 
+3. 对象属性有两种寻址方式：
+    name=person.lastname;
+    name=person["lastname"];
+4. Undefined 和 Null
+    Undefined 这个值表示变量不含有值。
+    可以通过将变量的值设置为 null 来清空变量。
+    cars=null;
+    person=null;
+5. 	JavaScript 变量均为对象。当您声明一个变量时，就创建了一个新的对象。
+6.当您声明新变量时，可以使用关键词 "new" 来声明其类型：
+    var carname=new String;
+    var x=      new Number;
+    var y=      new Boolean;
+    var cars=   new Array;
+    var person= new Object;
+7. JavaScript 对象是拥有属性和方法的数据。(类比java中的对象)
+8. JavaScript 对象是键值对的容器：name : value
+9. 对象的方法定义了一个函数，并作为对象的属性存储。
+10.如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性; carname="Volvo";//将声明 window 的一个属性 carname。
+11.如果变量在函数内没有声明（没有使用 var 关键字），该变量为全局变量。
+12.字符串可以是对象:
+    JavaScript 字符串是原始值，可以使用字符创建： var firstName = "John"
+    但我们也可以使用 new 关键字将字符串定义为一个对象： var firstName = new String("John")
+13.不要创建 String 对象。它会拖慢执行速度，并可能产生其他副作用。
+14. 绝对等于："==="
+    var x = "John";              
+    var y = new String("John");
+    (x === y) // 结果为 false，因为 x 是字符串，y 是对象
+15.原始值(比如：字符串"John",不是对象)可以使用 JavaScript 的属性和方法，因为 JavaScript 在执行方法和属性时可以把原始值当作对象；
+16.如果把数字与字符串相加，结果将成为字符串;
+17.JavaScript 标签
+    如需标记 JavaScript 语句，请在语句之前加上冒号：
+    label:{statements}
+    通过标签引用，break 语句可用于跳出任何 JavaScript 代码块：
+    label:
+    {
+        ......;
+        break label;//跳出此代码块，不在往下执行；从代码块后边开始执行；
+        ......;
+    }
+18.在JavaScript中，数组是一种特殊的对象类型。 因此 typeof [1,2,3,4] 返回 object。 
+19.null是一个只有一个值的特殊类型，表示一个空对象引用；用 typeof 检测 null 返回是object。
+20.在 JavaScript 中, undefined 是一个没有设置值的变量。typeof 一个没有值的变量会返回 undefined。
+    任何变量都可以通过设置值为 undefined 来清空。 类型为 undefined.
+    person = undefined; // 值为 undefined, 类型是undefined
+21.undefined 和 null 的区别
+    null 和 undefined 的值相等，但类型不等：
+    typeof undefined             // undefined
+    typeof null                  // object
+    null === undefined           // false
+    null == undefined            // true
+22.JavaScript 数据类型
+    在 JavaScript 中有 5 种不同的数据类型：
+    string
+    number
+    boolean
+    object
+    function
+    3 种对象类型：
+    Object
+    Date
+    Array
+    2 个不包含任何值的数据类型：
+    null
+    undefined
+23.constructor 属性返回所有 JavaScript 变量的构造函数。
+24.toFixed():把数字转换为字符串，结果的小数点后有指定位数的数字。
+25.一元运算符 "+" :可用于将变量转换为数字。如果变量不能转换，它仍然会是一个数字，但值为 NaN (不是一个数字)。
+    typeof +'5'; //'number'
+26.将布尔值转换为数字
+    全局方法 Number() 可将布尔值转换为数字。
+    Number(false)     // 返回 0
+    Number(true)      // 返回 1
+27.将日期转换为数字
+    全局方法 Number() 可将日期转换为数字。
+    d = new Date();
+    Number(d)          // 返回 1404568027739
+    日期方法 getTime() 也有相同的效果。
+    d = new Date();
+    d.getTime()        // 返回 1404568027739
+28.自动转换类型
+    当 JavaScript 尝试操作一个 "错误" 的数据类型时，会自动转换为 "正确" 的数据类型:
+    5 + null    // 返回 5         null 转换为 0
+    "5" + null  // 返回"5null"   null 转换为 "null"
+    "5" + 1     // 返回 "51"      1 转换为 "1"  
+    "5" - 1     // 返回 4         "5" 转换为
+29.自动转换为字符串：当你尝试输出一个对象或一个变量时 JavaScript 会自动调用变量的 toString() 方法；
+30.JavaScript 正则表达式:/正则表达式主体/修饰符(可选)    eg. var patt = /runoob/i
+    使用字符串方法：
+    在 JavaScript 中，正则表达式通常用于两个字符串方法 : search() 和 replace()。
+    search() 方法 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。
+    replace() 方法 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。
+    
+    search() 方法使用正则表达式
+    使用正则表达式搜索 "Runoob" 字符串，且不区分大小写：
+    var str = "Visit Runoob!"; 
+    var n = str.search(/Runoob/i);
+    输出结果为：6
+
+    replace() 方法使用正则表达式
+    使用正则表达式且不区分大小写将字符串中的 Microsoft 替换为 Runoob :
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace(/microsoft/i,"Runoob");
+    结果输出为:Visit Runoob!
+31.正则表达式修饰符：
+    修饰符	  描述
+    i	    执行对大小写不敏感的匹配。
+    g	    执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+    m	    执行多行匹配。
+32.JavaScript 中，RegExp 对象是一个预定义了属性和方法的正则表达式对象:
+    test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false;
+    var patt = /e/;
+    patt.test("The best things in life are free!");
+    输出为：true
+33.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
