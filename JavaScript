@@ -124,50 +124,8 @@
     var patt = /e/;
     patt.test("The best things in life are free!");
     输出为：true
-33.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+33.把 throw 与 try 和 catch 一起使用，那么您能够控制程序流，并生成自定义的错误消息:
+throw 语句允许我们创建自定义错误:throw exception ;//异常可以是 JavaScript 字符串、数字、逻辑值或对象。
 
 
 
